@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/eledia/видеофайлы/atlas_led.csv" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/eledia/видеофайлы/atlas_led_zarub.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/видеофайлы/list_led_poln.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/видеофайлы/list_led_zarub_poln.csv" charset="windows-1251" />
   </component>
 </project>
