@@ -3,7 +3,14 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/eledia/видеофайлы/atlas_led.csv" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/eledia/видеофайлы/atlas_led_zarub.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/видеофайлы/dict.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/видеофайлы/dict_url.csv" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/eledia/видеофайлы/list_led_poln.csv" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/eledia/видеофайлы/list_led_zarub_poln.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/видеофайлы/list_set.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/видеофайлы/list_set2.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/видеофайлы/list_url.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/видеофайлы/Альвеолярная пиорея.txt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/eledia/замена ссылок/dict.csv" charset="windows-1251" />
   </component>
 </project>
