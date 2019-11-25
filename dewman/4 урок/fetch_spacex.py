@@ -5,26 +5,34 @@ import urllib3
 urllib3.disable_warnings()
 
 
-def fetch_spacex_last_launch():
-    path = 'images'
-    url = 'https://api.spacexdata.com/v3/launches/latest?filter=links/flickr_images'
-    if not os.path.exists(path):
-        os.makedirs(path)
+def get_response_json(url, name):
     response = requests.get(url)
     response.raise_for_status()
     response = response.json()
-    links = response.get('links')
-    flickr_images = links.get('flickr_images')
-    for number, url in enumerate(flickr_images, 1):
-        response = requests.get(url)
-        response.raise_for_status()
-        filname = f'spacex{number}.jpg'
-        with open(os.path.join(path, filname), 'wb') as file:
-            file.write(response.content)
+    return response.get(name)
+
+
+def write_photo(data, path):
+    with open(os.path.join(path, data['filname']), 'wb') as file:
+        file.write(data['response_photo'].content)
 
 
 def main():
-    fetch_spacex_last_launch()
+    path = 'images'
+    os.makedirs(path, exist_ok=True)
+    url = 'https://api.spacexdata.com/v3/launches/latest?filter=links/flickr_images'
+    name = 'links'
+    links = get_response_json(url, name)
+    flickr_images = links.get('flickr_images')
+    if not flickr_images:
+        raise requests.exceptions.HTTPError('в последнем запуске нет фото ')
+    for number, url in enumerate(flickr_images, 1):
+        response_photo = requests.get(url)
+        response_photo.raise_for_status()
+        filname = f'spacex{number}.jpg'
+        data = {'response_photo': response_photo,
+                'filname': filname}
+        write_photo(data, path)
 
 
 if __name__ == '__main__':
