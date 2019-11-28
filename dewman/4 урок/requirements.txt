@@ -1,2 +1,4 @@
-instabot==0.4.5
-python-dotenv
+instabot==0.4.10
+dotenv-python==0.0.1
+Pillow==6.2.1
+requests==2.22.0
